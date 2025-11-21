@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    /* Strictness */
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module resolution */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+
+    /* Output & behavior */
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    /* Path mapping for monorepo packages */
+    "baseUrl": ".",
+    "paths": {
+      "@lifeos/*": ["packages/*/src"]
+    }
+  },
+
+  "include": ["packages", "apps"],
+  "exclude": ["node_modules", "dist"]
+}
